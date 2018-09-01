@@ -12,23 +12,32 @@
 <body>
 
 	<nav id="navigation" class="topnav">
+		<b class="company-phrase" href="index.php">Jack's House</b>
 		<a href="login.php">Login</a>
 		<a href="products.php">Products</a>
 		<a class="active" href="index.php">Home</a>
 	</nav>
 
-	<header id="masthead">
-		<article id='Logo'>
-			<img src='../../media/placeholder.png' alt='Logo' width="20%" height="auto" />
-		</article>
-		<div>Put company logo and name here</div>
+	<header id="header" class="header">
+		<div class="logo">
+			<a href="products.php">
+			<img class="cool-logo" src="../../media/fight-milk.png" alt="logo"/>
+				</a>
+			<div class="greetings">Buy that merch!</div>
+		</div>
+		<div class="container">
+
+		</div>
 	</header>
 
-	<main>
-		<article id='Website Under Construction'>
-			<!-- Creative Commons image sourced from https://pixabay.com/en/maintenance-under-construction-2422173/ and used for educational purposes only -->
-			<img src='../../media/website-under-construction.png' alt='Website Under Construction' />
+	<main id="main" class="main">
+		<div class="container">
+			<h1 align="center" style="font-size: 70px;" class="welcome-message">Stop right there kiddo, this is a stickup.</h1>
+		</div>
+		<article id='Logo'>
+			<img class="center" src='../../media/placeholder.png' alt="cool-kid" />
 		</article>
+
 	</main>
 
 	<footer>
