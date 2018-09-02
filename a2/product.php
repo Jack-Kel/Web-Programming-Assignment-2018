@@ -23,9 +23,31 @@
 			<a href="products.php">
 			<img class="cool-logo" src="../../media/fight-milk.png" alt="logo"/>
 				</a>
-			<div class="greetings">Buy that merch!</div>
 		</div>
 		<div class="container">
 
 		</div>
 	</header>
+	<main class="main">
+		<div class="grid-container">
+			<div class="grid-item"></div>
+			<div class="grid-item"></div>
+			<div class="grid-item"></div>
+			<div class="grid-item"></div>
+			<div class="grid-item"></div>
+			<div class="grid-item"></div>
+		</div>
+	</main>
+	<footer class="footer">
+		<div>&copy;
+			<script>
+				document.write(new Date().getFullYear());
+
+			</script> Jack, s3707738 and DollarMerchStore(TM).</div>
+		<div>Disclaimer: This website is not a real website and is being developed as part of a School of Science Web Programming course at RMIT University in Melbourne, Australia.</div>
+		<div><button id='toggleWireframeCSS' onclick='toggleWireframe()'>Toggle Wireframe CSS</button></div>
+	</footer>
+
+</body>
+
+</html>

@@ -23,24 +23,27 @@
 			<a href="products.php">
 			<img class="cool-logo" src="../../media/fight-milk.png" alt="logo"/>
 				</a>
-			<div class="greetings">Buy that merch!</div>
-		</div>
-		<div class="container">
-
 		</div>
 	</header>
 
 	<main id="main" class="main">
-		<div class="container">
-			<h1 align="center" style="font-size: 70px;" class="welcome-message">Stop right there kiddo, this is a stickup.</h1>
+		<div class="welcome-message">Welcome to the house that I built.
 		</div>
-		<article id='Logo'>
-			<img class="center" src='../../media/placeholder.png' alt="cool-kid" />
-		</article>
+
+		<div class="grid-container">
+			<div class="grid-item"><img class="picture-of-me" src="../../media/placeholder.png" alt="me" /></div>
+			<div class="grid-item"><div class="text-info">Hello. My name is Jack and I plan on becoming the worlds greatest web developer. I have hired myself to design this incredible website so that you can buy all my fantastic merch. Please won't you come on this merry journey with me (to the merch store).
+			</div></div>
+			<div class="grid-item"><div class="text-info">What more is there to say? I'm just a cool guy who loves to sell t-shirts with pictures of himself on them. Go check it out!</div></div>
+			<div class="grid-item"><img class="picture-of-me" src="../../media/me-placeholder.png" alt="cool-me"/></div>
+			<div class="grid-item">Focus Picture</div>
+			<div class="grid-item">Focus Info</div>
+
+		</div>
 
 	</main>
 
-	<footer>
+	<footer class="footer">
 		<div>&copy;
 			<script>
 				document.write(new Date().getFullYear());
