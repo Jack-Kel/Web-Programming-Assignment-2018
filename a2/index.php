@@ -36,8 +36,8 @@
 			</div></div>
 			<div class="grid-item"><div class="text-info">What more is there to say? I'm just a cool guy who loves to sell t-shirts with pictures of himself on them. Go check it out!</div></div>
 			<div class="grid-item"><img class="picture-of-me" src="../../media/me-placeholder.png" alt="cool-me"/></div>
-			<div class="grid-item">Focus Picture</div>
-			<div class="grid-item">Focus Info</div>
+			<div class="grid-item"><img class="picture-of-me" src="../../media/placeholder-focus.png" alt="focus-me"/></div>
+			<div class="grid-item"><div class="text-info">My focus is both self-promotion and merch-promotion. This website is designed to show how committed and <i>STRONG</i> I am... As well as to plug my merch. Who doesn't like to make a little money on the side? </div> </div>
 
 		</div>
 

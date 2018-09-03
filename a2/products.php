@@ -30,13 +30,14 @@
 	</header>
 
 	<main class="main">
+		<div class="empty-space"></div>
 		<div class="grid-container">
-			<div class="grid-item"></div>
-			<div class="grid-item"></div>
-			<div class="grid-item"></div>
-			<div class="grid-item"></div>
-			<div class="grid-item"></div>
-			<div class="grid-item"></div>
+			<div class="grid-item">Product One</div>
+			<div class="grid-item">Picture of Product One</div>
+			<div class="grid-item">Product Two</div>
+			<div class="grid-item">Image of Product Two</div>
+			<div class="grid-item">Product Three</div>
+			<div class="grid-item">Picture of Product Three</div>
 		</div>
 	</main>
 
