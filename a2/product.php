@@ -29,6 +29,7 @@
 		</div>
 	</header>
 	<main class="main">
+
 		<div class="grid-container">
 			<div class="grid-item"></div>
 			<div class="grid-item"></div>

@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>Assignment 2</title>
+	<title>The House: Store</title>
 	<link id='wireframecss' type="text/css" rel="stylesheet" href="../wireframe.css" disabled/>
 	<link id='stylecss' type="text/css" rel="stylesheet" href="css/stylesheet.css" />
 	<script src='../wireframe.js'></script>
@@ -30,14 +30,21 @@
 	</header>
 
 	<main class="main">
-		<div class="empty-space"></div>
-		<div class="grid-container">
-			<div class="grid-item">Product One</div>
-			<div class="grid-item">Picture of Product One</div>
-			<div class="grid-item">Product Two</div>
-			<div class="grid-item">Image of Product Two</div>
-			<div class="grid-item">Product Three</div>
-			<div class="grid-item">Picture of Product Three</div>
+		<div class="title-div">
+			<div class="welcome-to-regular">
+				💣 Bomb as merch 💣
+			</div>
+			<div class="sub-message">
+				buying this is the only way your ugly ass is gettin' any
+			</div>
+		</div>
+		<div class="grid-container-products">
+			<div class="grid-item"><a href="hoodie.php">
+				<img class="product-picture" src=../../media/placeholder-hoodie.png alt="good-as-hoodie"/> </a></div>
+			<div class="grid-item"><a href="tshirt.php">
+				<img class="product-picture" src=../../media/placeholder-t.png alt="the-T"/></a></div>
+			<div class="grid-item"><a href="mug.php">
+				<img class="product-picture" src=../../media/placeholder-mug.png alt="drink-up-baby"/></a></div>
 		</div>
 	</main>
 

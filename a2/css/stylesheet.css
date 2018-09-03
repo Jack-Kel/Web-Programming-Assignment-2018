@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway');
-@import url('https://fonts.googleapis.com/css?family=Merriweather');
+@import url('https://fonts.googleapis.com/css?family=Merriweather|Playfair+Display|Raleway');
 nav {
 	list-style-type: none;
 	margin: 0px;
@@ -42,9 +41,9 @@ body {
 	font-family: 'Raleway', sans-serif;
 	text-align: center;
 	background-color: #f9f9f9;
-	height: 60vh;
+	height: 55vh;
 	vertical-align: middle;
-	padding-top: 25vh;
+	padding-top: 20vh;
 }
 
 .center {
@@ -66,8 +65,8 @@ body {
 
 .logo img {
 
-	opacity: 0.2;
-    filter: alpha(opacity=50);
+	opacity: 0.1;
+    filter: alpha(opacity=10);
 }
 
 .logo img:hover{
@@ -99,6 +98,7 @@ body {
 	padding-top: 12%;
 	padding-right: 10%;
 	padding-left: 10%;
+	padding-bottom: 12%;
 }
 
 .grid-container {
@@ -112,8 +112,52 @@ body {
 	background-color: #efefef;
 }
 
+.grid-container-products {
+	display: grid;
+	font-family: 'Merriweather', serif;
+	grid: auto / auto;
+	padding-left: 100px;
+	padding-right: 100px;
+	padding-bottom: 100px;
+	padding-top: 100px;
+	background-color: #efefef;
+}
+
 .grid-item {
 	font-size: 20px;
+	text-align: center;
+}
+
+.product-picture{
+	border-radius: 200px;
+	opacity: 0.5;
+	filter: alpha(opacity=50);
+	margin-bottom: 30px;
+	margin-top: 30px;
+	margin-top: 30px;
+	border: 3px solid black;
+}
+
+.product-picture:hover{
+	opacity: 1.0;
+    filter: alpha(opacity=100);
+}
+
+.title-div {
+	padding-top: 40px;
+	height: 20vh;
+	padding-bottom: 5vh;
+}
+
+.welcome-to-regular {
+	font-family: 'Raleway', sans-serif;
+	font-size: 40px;
+	text-align: center;
+}
+
+.sub-message {
+	font-family: 'Playfair Display', serif;
+	font-size: 10px;
 	text-align: center;
 }
 

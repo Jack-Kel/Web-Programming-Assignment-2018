@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>Assignment 2</title>
+	<title>The House: Welcome</title>
 	<link id='wireframecss' type="text/css" rel="stylesheet" href="../wireframe.css" disabled/>
 	<link id='stylecss' type="text/css" rel="stylesheet" href="css/stylesheet.css" />
 	<script src='../wireframe.js'></script>
