@@ -7,6 +7,7 @@
 	<link id='wireframecss' type="text/css" rel="stylesheet" href="../wireframe.css" disabled/>
 	<link id='stylecss' type="text/css" rel="stylesheet" href="css/stylesheet.css" />
 	<script src='../wireframe.js'></script>
+	<script src='scripts/submit.js'></script>
 </head>
 
 <body>
@@ -44,15 +45,18 @@
 				<div class="buy-it-text">
 				Only comes in XS <br/>
 				Handwash only <br/>
-				Definitely no refunds</div>
+				Definitely no refunds <br>
+				$59.99</div>
 				<div class="product-image">
 					<img src=../../media/placeholder-t.png alt="the-good-t" />
 				</div>
 			</div>
 			<div class="grid-item">
-				<form action="https://titan.csit.rmit.edu.au/~e54061/wp/processing.php" class="form" id="form-submit">
-					<input type="hidden" name="id" value="hood">
-					Quantity: <input type="number" name="qty" value="0" min="0">
+				<form method="post" action="https://titan.csit.rmit.edu.au/~e54061/wp/processing.php?ref=product" class="form" id="form-submit" onsubmit="return submit_form()" target="_blank">
+					<input type="hidden" name="id" value="shirt">
+					Quantity: <br/> <button class="plus-minus-button" type="button" id="minus">−</button>
+					<input type="number" name="qty" value="0" id="input" min="0" max="1" />
+					<button class="plus-minus-button" type="button" id="plus">+</button>
 				</form>
 				<select name="option" class="select-list" form="form-submit">
 					<option value="white">White</option>
@@ -61,7 +65,7 @@
 				</select>
 			</div>
 			<div class="grid-item">
-				<button type="submit" form="form-submit" class="buy-button" value="buy">Buy</button>
+				<button id="submit" type="submit" form="form-submit" class="buy-button" value="buy">Buy</button>
 			</div>
 		</div>
 
@@ -78,5 +82,5 @@
 	</footer>
 
 </body>
-
+<script src='scripts/button.js'></script>
 </html>

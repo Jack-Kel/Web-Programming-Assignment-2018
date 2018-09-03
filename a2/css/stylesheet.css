@@ -10,6 +10,12 @@ body {
 	background-color: #f9f9f9;
 }
 
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 .topnav {
 	background-color: #7a7a7a;
 	overflow: hidden;
@@ -193,10 +199,12 @@ body {
 .form {
 	padding-top: 20px;
 	font-size: 14px;
+	font-family: 'Raleway', sans-serif;
 }
 
 .form input {
 	width: 25px;
+	margin-top: 12px;
 }
 
 .grid-item button {
@@ -229,18 +237,41 @@ body {
 	color: black;
 }
 
+.plus-minus-button {
+	margin-top: 15px;
+	margin-left: 5px;
+	margin-right: 5px;
+	padding: 2px 9px;
+	font-size: 16px;
+	text-align: center;
+	cursor: pointer;
+	outline: none;
+	color: #fff;
+	background-color: #7a7a7a;
+	border: none;
+	border-radius: 10px;
+	box-shadow: 0 2px #999;
+}
+
+.plus-minus-button:hover {
+	background-color: #FFA71a;
+	color: black;
+}
+
+.plus-minus-button:active {
+	background-color: #DC9417;
+	box-shadow: 0 5px #666;
+	transform: translateY(2px);
+	color: black;
+}
+
 
 .empty-space {
 	padding-top: 150px;
 }
 
-.grid-container-form {
-	padding-left: 45%;
-	padding-right: 45%;
-	display: grid;
-	grid-template-columns: auto auto auto;
-}
-.grid-item-form{
+.select-list {
+	margin-top: 15px;
 
 }
 .footer {
