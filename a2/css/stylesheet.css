@@ -1,19 +1,25 @@
 @import url('https://fonts.googleapis.com/css?family=Merriweather|Playfair+Display|Raleway');
 nav {
+	position: fixed;
+	top: 0;
+	width: 100%;
 	list-style-type: none;
 	margin: 0px;
 	padding: 0px;
 	background-color: antiquewhite;
+
 }
 
 body {
 	background-color: #f9f9f9;
+	width: 100%;
+	margin: 0;
 }
 
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+	-webkit-appearance: none;
+	margin: 0;
 }
 
 .topnav {
@@ -49,7 +55,7 @@ input[type=number]::-webkit-outer-spin-button {
 	background-color: #f9f9f9;
 	height: 55vh;
 	vertical-align: middle;
-	padding-top: 20vh;
+	padding-top: 40vh;
 }
 
 .center {
@@ -81,20 +87,22 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .cool-logo {
+	position: relative;
 	display: left;
 	margin-left: auto;
 	margin-right: auto;
-	padding-top: 12px;
-	width: 10%;
+	width: 12%;
 }
 
 .header {
-	overflow: hidden
+	position: fixed;
+	top: 6vmin;
+	overflow: hidden;
 }
 
 .picture-of-me {
 	display: inline-block;
-	border-radius: 600px;
+	border-radius: 400px;
 	width: 350px;
 }
 
@@ -112,10 +120,10 @@ input[type=number]::-webkit-outer-spin-button {
 	text-align: justify;
 	font-family: 'Merriweather', serif;
 	grid: auto / auto auto;
-	padding-left: 100px;
-	padding-right: 100px;
-	padding-bottom: 100px;
-	padding-top: 100px;
+	padding-left: 8vw;
+	padding-right: 8vw;
+	padding-bottom: 12vh;
+	padding-top: 12vh;
 	background-color: #efefef;
 }
 
@@ -123,16 +131,32 @@ input[type=number]::-webkit-outer-spin-button {
 	display: grid;
 	font-family: 'Merriweather', serif;
 	grid: auto / auto;
-	padding-left: 100px;
-	padding-right: 100px;
-	padding-bottom: 100px;
-	padding-top: 100px;
+	padding-left: 15vw;
+	padding-right: 15vw;
+	padding-bottom: 2vh;
+	padding-top: 2vh;
 	background-color: #efefef;
+}
+
+.grid-container-product {
+	display: grid;
+	font-family: 'Merriweather', serif;
+	grid: auto/ auto auto;
+	background-color: #efefef;
+	justify-content: center;
+	align-items: center;
+}
+
+.grid-item-product {
+	font-size: 20px;
+	text-align: center;
+	align-content: center;
 }
 
 .grid-item {
 	font-size: 20px;
 	text-align: center;
+	padding: 5vh 5vh;
 }
 
 .product-picture {
@@ -151,9 +175,8 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .title-div {
-	padding-top: 40px;
-	height: 20vh;
-	padding-bottom: 5vh;
+	padding-top: 20vh;
+	padding-bottom: 15vh;
 }
 
 .welcome-to-regular {
@@ -169,13 +192,15 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .product-image img {
+	max-width: 100%;
+    height: auto;
 	position: relative;
-	padding: 50px;
 	transition: transform .2s;
 	width: 50vh;
-	height: 50vh;
+	height: auto;
 	margin: 0 auto;
 	border-radius: 400px;
+	border-bottom: 5%;
 }
 
 .product-image img:hover {
@@ -187,9 +212,8 @@ input[type=number]::-webkit-outer-spin-button {
 	font-family: 'Playfair Display', serif;
 	position: relative;
 	text-align: center;
-	top: 50%;
-	bottom: 50%;
-	font-size: 40px;
+	top: 38%;
+	font-size: 2.5vw;
 	color: black;
 	font-style: italic;
 	font-weight: bolder;
@@ -274,6 +298,218 @@ input[type=number]::-webkit-outer-spin-button {
 	margin-top: 15px;
 
 }
+
+#centred-login {
+	padding-left: 50%;
+	padding-right: 50%;
+}
+
+.login {
+	font-family: 'Raleway', sans-serif;
+	font-size: 14px;
+}
+
+/* Full-width input fields */
+
+.login input[type=text],
+input[type=password] {
+	width: 100%;
+	margin-top: 8px;
+	margin-bottom: 8px;
+	padding: 12px 20px;
+	display: inline-block;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+}
+
+
+.initial-button {
+	padding: 15px 20px;
+	font-size: 16px;
+	text-align: center;
+	cursor: pointer;
+	outline: none;
+	color: #fff;
+	background-color: #7a7a7a;
+	border: none;
+	border-radius: 15px;
+	box-shadow: 0 7px #999;
+}
+
+.initial-button:hover {
+	background-color: #FFA71a;
+	color: black;
+}
+
+.initial-button:active {
+	background-color: #DC9417;
+	box-shadow: 0 5px #666;
+	transform: translateY(2px);
+	color: black;
+}
+
+#send-it-button {
+	padding: 9px 30px;
+	box-shadow: 0 4px #999;
+	font-size: 13px;
+}
+
+/* Center the image and position the close button */
+
+.imgcontainer {
+	text-align: center;
+	margin: 24px 0 12px 0;
+	position: relative;
+}
+
+.login img.avatar {
+	width: 40%;
+	border-radius: 50%;
+}
+
+.container {
+	padding: 16px;
+}
+
+.login span.psw {
+	float: right;
+	padding-top: 16px;
+}
+
+/* The Modal (background) */
+
+.modal {
+	display: none;
+	/* Hidden by default */
+	position: fixed;
+	/* Stay in place */
+	z-index: 1;
+	/* Sit on top */
+	left: 0;
+	top: 0;
+	width: 100%;
+	/* Full width */
+	height: 100%;
+	/* Full height */
+	overflow: auto;
+	/* Enable scroll if needed */
+	background-color: rgb(0, 0, 0);
+	/* Fallback color */
+	background-color: rgba(0, 0, 0, 0.4);
+	/* Black w/ opacity */
+	padding-top: 60px;
+}
+
+/* Modal Content/Box */
+
+.modal-content {
+	background-color: #fefefe;
+	margin: 5% auto 15% auto;
+	/* 5% from the top, 15% from the bottom and centered */
+	border: 1px solid #888;
+	width: 70%;
+	/* Could be more or less, depending on screen size */
+	padding: 30px 30px;
+}
+
+/* The Close Button (x) */
+
+.close {
+	position: absolute;
+	right: 25px;
+	top: 0;
+	color: #000;
+	font-size: 35px;
+	font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+	color: red;
+	cursor: pointer;
+}
+
+/* Add Zoom Animation */
+
+.animate {
+	-webkit-animation: animatezoom 0.6s;
+	animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+	from {
+		-webkit-transform: scale(0)
+	}
+	to {
+		-webkit-transform: scale(1)
+	}
+}
+
+@keyframes animatezoom {
+	from {
+		transform: scale(0)
+	}
+	to {
+		transform: scale(1)
+	}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+
+@media screen and (max-width: 300px) {
+	span.psw {
+		display: block;
+		float: none;
+	}
+	.cancelbtn {
+		width: 100%;
+	}
+}
+
+.screen-fixing {
+	margin-bottom: 45vh;
+}
+
+.main {
+	width: 100%;
+}
+
 .footer {
 	background-color: #e5e5e5;
+	position: absolute;
+	bottom: 10;
+	width: 100%
+}
+
+.new-product-grid {
+	margin-left: 15%;
+	margin-right: 15%;
+	display: grid;
+	grid-template-areas:
+		'header menu'
+		'header main';
+	grid-template-rows:
+		'5vh 5vh'
+	padding: 10px;
+	margin-bottom: 10%;
+}
+
+.new-product-grid > div {
+	text-align: center;
+	font-size: 30px;
+}
+
+.grid-p-image {
+	grid-area: header;
+	padding-bottom: 20%;
+}
+
+.grid-p-title {
+	grid-area: menu;
+	padding-top: 70%;
+}
+
+.grid-buy-stuff {
+	grid-area: main;
+	padding-bottom: 30%;
 }

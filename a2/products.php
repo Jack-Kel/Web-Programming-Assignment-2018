@@ -24,9 +24,6 @@
 			<img class="cool-logo" src="../../media/fight-milk.png" alt="logo"/>
 				</a>
 		</div>
-		<div class="container">
-
-		</div>
 	</header>
 
 	<main class="main">

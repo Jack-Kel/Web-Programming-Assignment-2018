@@ -32,41 +32,35 @@
 
 	<main>
 
-		<div class="title-div">
-			<div class="welcome-to-regular">
-				T-Shirt
-			</div>
-			<div class="sub-message">
-				one size fits all
-			</div>
-		</div>
-		<div class="grid-container-products">
-			<div class="grid-item">
+		<div class="new-product-grid">
+			<div class="grid-p-image">
 				<div class="buy-it-text">
-				Only comes in XS <br/>
-				Handwash only <br/>
-				Definitely no refunds <br>
-				$59.99</div>
+					Only comes in XS <br/> Handwash only <br/> Definitely no refunds <br> $59.99
+				</div>
 				<div class="product-image">
-					<img src=../../media/placeholder-t.png alt="the-good-t" />
+					<img src=../../media/placeholder-t.png alt="the-T" />
 				</div>
 			</div>
-			<div class="grid-item">
+			<div class="grid-p-title">
+				<div class="welcome-to-regular">
+					T-Shirt
+				</div>
+				<div class="sub-message">
+					one size fits all
+				</div>
+			</div>
+			<div class="grid-buy-stuff">
 				<form method="post" action="https://titan.csit.rmit.edu.au/~e54061/wp/processing.php?ref=product" class="form" id="form-submit" onsubmit="return submit_form()" target="_blank">
-					<input type="hidden" name="id" value="shirt">
-					Quantity: <br/> <button class="plus-minus-button" type="button" id="minus">−</button>
-					<input type="number" name="qty" value="0" id="input" min="0" max="1" />
+					<input type="hidden" name="id" value="tshirt"> Quantity: <br/>
+					<button class="plus-minus-button" type="button" id="minus">−</button>
+					<input type="number" name="qty" value="0" id="input" min="0" />
 					<button class="plus-minus-button" type="button" id="plus">+</button>
 				</form>
 				<select name="option" class="select-list" form="form-submit">
-					<option value="white">White</option>
-					<option value="b-white">Bright White</option>
-					<option value="o-white">Off-White</option>
-				</select>
-			</div>
-			<div class="grid-item">
-				<button id="submit" type="submit" form="form-submit" class="buy-button" value="buy">Buy</button>
-			</div>
+					<option value="black">White</option>
+					<option value="d-black">Off-White</option>
+					<option value="white">Eggshell</option>
+				</select><br/><button id="submit" type="submit" form="form-submit" class="buy-button" value="buy">Buy</button></div>
 		</div>
 
 	</main>
@@ -83,4 +77,5 @@
 
 </body>
 <script src='scripts/button.js'></script>
+
 </html>

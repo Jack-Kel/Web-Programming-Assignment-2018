@@ -7,6 +7,7 @@
 	<link id='wireframecss' type="text/css" rel="stylesheet" href="../wireframe.css" disabled/>
 	<link id='stylecss' type="text/css" rel="stylesheet" href="css/stylesheet.css" />
 	<script src='../wireframe.js'></script>
+	<script src='scripts/login.js'></script>
 </head>
 
 <body>
@@ -24,20 +25,45 @@
 			<img class="cool-logo" src="../../media/fight-milk.png" alt="logo"/>
 				</a>
 		</div>
-		<div class="container">
-
-		</div>
 	</header>
 
-	<main class="main">
-		<div class="grid-container">
-			<div class="grid-item"></div>
-			<div class="grid-item"></div>
-			<div class="grid-item"></div>
-			<div class="grid-item"></div>
-			<div class="grid-item"></div>
-			<div class="grid-item"></div>
+	<div class="title-div">
+		<div class="welcome-to-regular">
+			You think you got what it takes?
 		</div>
+
+	</div>
+
+	<main class="main">
+		<div class="centred-login" id="centred-login">
+			<div class="login">
+				<button class="initial-button" type="button" onclick="document.getElementById('login-box').style.display='block'" style="width:auto;">Join</button>
+
+				<div id="login-box" class="modal">
+
+					<form method="post" class="modal-content animate" action="https://titan.csit.rmit.edu.au/~e54061/wp/processing.php?ref=product" target="_blank">
+						<div class="imgcontainer">
+							<span onclick="document.getElementById('login-box').style.display='none'" class="close" title="Close Modal">&times;</span>
+							<img src="../../media/avatar-placeholder.png" alt="Avatar" class="avatar">
+						</div>
+
+						<div class="login">
+							<label for="uname"><b>Username</b></label>
+							<input type="text" placeholder="Enter Username" name="uname" required>
+
+							<label for="psw"><b>Password</b></label>
+							<input type="password" placeholder="Enter Password" name="psw" required>
+
+							<button class="initial-button" id="send-it-button" type="submit">Send It!</button>
+
+						</div>
+
+					</form>
+				</div>
+
+			</div>
+		</div>
+		<div class="screen-fixing"></div>
 	</main>
 
 	<footer class="footer">
