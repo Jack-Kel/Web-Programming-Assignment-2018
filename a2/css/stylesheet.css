@@ -104,13 +104,8 @@ input[type=number]::-webkit-outer-spin-button {
 	overflow: hidden;
 }
 
-#basic-info{
-	display: none;
-}
-
 .picture-of-me {
 	display: inline-block;
-	border-radius: 400px;
 	width: 40vh;
 }
 
@@ -127,6 +122,10 @@ input[type=number]::-webkit-outer-spin-button {
 
 }
 
+.all-basic-info {
+	display: none;
+}
+
 .text-info {
 	display: inline-block;
 	text-align: justify;
@@ -138,14 +137,78 @@ input[type=number]::-webkit-outer-spin-button {
 
 .grid-container {
 	display: grid;
-	text-align: justify;
-	font-family: 'Merriweather', serif;
-	grid: auto / auto auto;
+	align-items: stretch;
+	align-content: center;
+	padding-top: 20vh;
 	padding-left: 20vw;
 	padding-right: 20vw;
-	padding-bottom: 12vh;
-	padding-top: 12vh;
 	background-color: #ECECEC;
+}
+
+#basic-info{
+	grid-template-areas:
+		'picture picture picture blank  blank  blank blank'
+		'picture picture picture text   text   text  text'
+		'picture picture picture text   text   text  text'
+		'blank2  blank2  blank3  text   text   text  text';
+	padding-bottom: 20vh;
+}
+
+#basic-info-two {
+	grid-template-areas:
+		'blank blank blank blank  picture  picture picture'
+		'text  text  text  text   picture  picture picture'
+		'text  text  text  text   picture  picture picture'
+		'text  text  text  text   blank3   blank2  blank2';
+	padding-bottom: 20vh;
+}
+
+.grid-container > div {
+	font-size: 30px;
+}
+
+.grid-template-blank2{
+	grid-area: blank2;
+	opacity: 0;
+}
+
+.grid-template-picture {
+	grid-area: picture;
+	background-size: cover;
+	padding-top: 12vh;
+	padding-bottom: 12vh;
+	width: 45vmin;
+	height: auto;
+
+}
+
+#picture-me-one{
+	background-image: url(../../../media/me.png);
+}
+
+#picture-me-two{
+	background-image: url(../../../media/me2.png);
+}
+
+.grid-template-blank{
+	grid-area: blank;
+	opacity: 0;
+}
+
+.grid-template-blank3{
+	grid-area: blank3;
+	background-color: #999;
+}
+
+.grid-template-text{
+	text-align: center;
+	padding: 7vmin;
+	color: #fff;
+	grid-area: text;
+	font-family: 'Merriweather', serif;
+	font-size: 0.5vh;
+	background-color: #999;
+
 }
 
 .grid-container-products {
