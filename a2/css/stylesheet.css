@@ -93,9 +93,10 @@ input[type=number]::-webkit-outer-spin-button {
 .cool-logo {
 	position: relative;
 	display: left;
-	margin-left: auto;
+	margin-left: 1vw;
 	margin-right: auto;
 	width: 12%;
+	border-radius: 100px;
 }
 
 .header {

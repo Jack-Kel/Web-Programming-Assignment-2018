@@ -22,7 +22,7 @@
 	<header id="header" class="header">
 		<div class="logo">
 			<a href="products.php">
-			<img class="cool-logo" src="../../media/fight-milk.png" alt="logo"/>
+			<img class="cool-logo" src="../../media/my-logo.png" alt="logo"/>
 				</a>
 		</div>
 		<div class="container">
@@ -54,7 +54,7 @@
 				<form method="post" action="https://titan.csit.rmit.edu.au/~e54061/wp/processing.php?ref=product" class="form" id="form-submit" onsubmit="return submit_form()" target="_blank">
 					<input type="hidden" name="id" value="mug"> Quantity: <br/>
 					<button class="plus-minus-button" type="button" id="minus">−</button>
-					<input type="number" name="qty" value="0" id="input" min="0" max="1"/>
+					<input type="number" name="qty" value="0" id="input" min="0" max="1" />
 					<button class="plus-minus-button" type="button" id="plus">+</button>
 				</form>
 				<br/><button id="submit" type="submit" form="form-submit" class="buy-button" value="buy">Buy</button></div>
@@ -72,4 +72,9 @@
 
 </body>
 <script src='scripts/button.js'></script>
+<script>
+	document.getElementById("wireframecss").disabled = true;
+
+</script>
+
 </html>

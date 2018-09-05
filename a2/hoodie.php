@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>The House: Hood</title>
-	<link id='wireframecss' type="text/css" rel="stylesheet" href="../wireframe.css" disabled/>
+	<link id='wireframecss' type="text/css" rel="stylesheet" href="../wireframe.css"/>
 	<link id='stylecss' type="text/css" rel="stylesheet" href="css/stylesheet.css" />
 	<script src='../wireframe.js'></script>
 	<script src='scripts/submit.js'></script>
@@ -22,7 +22,7 @@
 	<header id="header" class="header">
 		<div class="logo">
 			<a href="products.php">
-			<img class="cool-logo" src="../../media/fight-milk.png" alt="logo"/>
+			<img class="cool-logo" src="../../media/my-logo.png" alt="logo"/>
 				</a>
 		</div>
 	</header>
@@ -65,5 +65,5 @@
 
 </body>
 <script src='scripts/button.js'></script>
-
+<script>document.getElementById("wireframecss").disabled=true;</script>
 </html>
