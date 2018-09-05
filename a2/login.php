@@ -10,7 +10,7 @@
 	<script src='scripts/login.js'></script>
 </head>
 
-<body>
+<body class="background-login">
 
 	<nav id="navigation" class="topnav">
 		<b class="company-phrase" href="index.php">Jack's House</b>

@@ -9,7 +9,7 @@
 	<script src='../wireframe.js'></script>
 </head>
 
-<body>
+<body class="body-products">
 
 	<nav id="navigation" class="topnav">
 		<b class="company-phrase" href="index.php">Jack's House</b>
@@ -32,7 +32,7 @@
 				💣 Bomb as merch 💣
 			</div>
 			<div class="sub-message">
-				buying this is the only way your ugly ass is gettin' any
+				guaranteed to make you 10% more attractive
 			</div>
 		</div>
 		<div class="grid-container-products">
