@@ -4,6 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>The House: Welcome</title>
+	<link rel="icon" href="../../media/favicon.ico" type="image/gif" sizes="16x16">
 	<link id='wireframecss' type="text/css" rel="stylesheet" href="../wireframe.css"/>
 	<link id='stylecss' type="text/css" rel="stylesheet" href="css/stylesheet.css" />
 	<script src='../wireframe.js'></script>
@@ -41,18 +42,18 @@
 
 				<div id="login-box" class="modal">
 
-					<form method="post" class="modal-content animate" action="https://titan.csit.rmit.edu.au/~e54061/wp/processing.php?ref=product" target="_blank">
+					<form method="post" class="modal-content animate" action="https://titan.csit.rmit.edu.au/~e54061/wp/processing.php?ref=login" target="_blank">
 						<div class="imgcontainer">
 							<span onclick="document.getElementById('login-box').style.display='none'" class="close" title="Close Modal">&times;</span>
 							<img src="../../media/avatar-placeholder.png" alt="Avatar" class="avatar">
 						</div>
 
 						<div class="login">
-							<label for="uname"><b>Username</b></label>
-							<input type="text" placeholder="Enter Username" name="uname" required>
+							<label for="uname"><b>Email</b></label>
+							<input type="text" placeholder="Enter Email" name="email" required>
 
 							<label for="psw"><b>Password</b></label>
-							<input type="password" placeholder="Enter Password" name="psw" required>
+							<input type="password" placeholder="Enter Password" name="password" required>
 
 							<button class="initial-button" id="send-it-button" type="submit">Send It!</button>
 

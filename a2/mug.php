@@ -4,6 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>The House: Mug</title>
+	<link rel="icon" href="../../media/favicon.ico" type="image/gif" sizes="16x16">
 	<link id='wireframecss' type="text/css" rel="stylesheet" href="../wireframe.css" disabled/>
 	<link id='stylecss' type="text/css" rel="stylesheet" href="css/stylesheet.css" />
 	<script src='../wireframe.js'></script>
