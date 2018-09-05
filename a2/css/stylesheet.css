@@ -164,10 +164,6 @@ input[type=number]::-webkit-outer-spin-button {
 	padding-bottom: 20vh;
 }
 
-.grid-container > div {
-	font-size: 30px;
-}
-
 .grid-template-blank2{
 	grid-area: blank2;
 	opacity: 0;
@@ -203,11 +199,13 @@ input[type=number]::-webkit-outer-spin-button {
 
 .grid-template-text{
 	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
 	padding: 7vmin;
 	color: #fff;
 	grid-area: text;
 	font-family: 'Merriweather', serif;
-	font-size: 0.5vh;
+	font-size: 2vw;
 	background-color: #999;
 
 }
