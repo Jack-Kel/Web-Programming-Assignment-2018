@@ -37,7 +37,7 @@ TOPSTUFF;
   }
 
 
-	function bottomModule(){
+	function endModule(){
 
 		$output = <<<"BOTTOMSTUFF"
 
