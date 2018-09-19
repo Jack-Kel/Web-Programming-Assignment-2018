@@ -8,7 +8,6 @@
 ?>
   <h2>Welcome to Our Business</h2>
   <p>We have nice things!</p>
-  <!-- Blah blah Blah, rest of content unique to index.php -->
 <?php
   endModule(); // Now a function call
 ?>

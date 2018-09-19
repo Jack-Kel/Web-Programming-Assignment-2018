@@ -1,34 +1,11 @@
-<!DOCTYPE html>
-<html lang='en'>
+<?php
+  session_start();
+  include_once('tools.php'); // now contains module and other helpful functions
 
-<head>
-	<meta charset="utf-8">
-	<title>The House: Hood</title>
-	<link rel="icon" href="../../media/favicon.ico" type="image/gif" sizes="16x16">
-	<link id='wireframecss' type="text/css" rel="stylesheet" href="../wireframe.css"/>
-	<link id='stylecss' type="text/css" rel="stylesheet" href="css/stylesheet.css" />
-	<script src='../wireframe.js'></script>
-	<script src='scripts/submit.js'></script>
-</head>
+  // Any POST or GET Request Processing Code goes here
 
-<body>
-
-	<nav id="navigation" class="topnav">
-		<b class="company-phrase" href="index.php">Jack's House</b>
-		<a href="login.php">Login</a>
-		<a class="active" href="products.php">Products</a>
-		<a href="index.php">Home</a>
-	</nav>
-
-	<header id="header" class="header">
-		<div class="logo">
-			<a href="products.php">
-			<img class="cool-logo" src="../../media/my-logo.png" alt="logo"/>
-				</a>
-		</div>
-	</header>
-
-	<main>
+  topModule('MySite - Cart', 'showSpecials()'); // Now a function call
+?>
 
 		<div class="new-product-grid">
 			<div class="grid-p-image"><div class="buy-it-text">
@@ -53,18 +30,6 @@
 					<option value="white">White</option>
 				</select><br/><button id="submit" type="submit" form="form-submit" class="buy-button" value="buy">Buy</button></div>
 		</div>
-	</main>
-	<footer class="footer">
-		<div>&copy;
-			<script>
-				document.write(new Date().getFullYear());
-
-			</script> s3707738 and his BombStore&trade;.</div>
-		<div>Disclaimer: This website is not a real website and is being developed as part of a School of Science Web Programming course at RMIT University in Melbourne, Australia.</div>
-		<div><button id='toggleWireframeCSS' onclick='toggleWireframe()'>Toggle Wireframe CSS</button></div>
-	</footer>
-
-</body>
-<script src='scripts/button.js'></script>
-<script>document.getElementById("wireframecss").disabled=true;</script>
-</html>
+	<?php
+  endModule(); // Now a function call
+?>

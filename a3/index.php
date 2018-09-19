@@ -1,34 +1,11 @@
-<!DOCTYPE html>
-<html lang='en'>
+<?php
+  session_start();
+  include_once('tools.php'); // now contains module and other helpful functions
 
-<head>
-	<meta charset="utf-8">
-	<title>The House</title>
-	<link rel="icon" href="../../media/favicon.ico" type="image/gif" sizes="16x16">
-	<link id='wireframecss' type="text/css" rel="stylesheet" href="../wireframe.css"/>
-	<link id='stylecss' type="text/css" rel="stylesheet" href="css/stylesheet.css" />
-	<script src='../wireframe.js'></script>
-	<script src="scripts/show-more.js"></script>
-</head>
+  // Any POST or GET Request Processing Code goes here
 
-<body>
-
-	<nav id="navigation" class="topnav">
-		<b class="company-phrase" href="index.php">Jack's House</b>
-		<a href="login.php">Login</a>
-		<a href="products.php">Products</a>
-		<a class="active" href="index.php">Home</a>
-	</nav>
-
-	<header id="header" class="header">
-		<div class="logo">
-			<a href="products.php">
-			<img class="cool-logo" src="../../media/my-logo.png" alt="logo"/>
-				</a>
-		</div>
-	</header>
-
-	<main id="main" class="main">
+  topModule('MySite - Cart', 'showSpecials()'); // Now a function call
+?>
 		<div class="welcome-message">Welcome to the house that I built.
 			<div class="show-more" id="show-more"> <button class="initial-button" id="show-more-link" type="button" onclick="javascript:showMore()">&#751; &#751; &#751;</button>
 			</div>
@@ -54,8 +31,6 @@
 
 		</div>
 
-	</main>
-
-<?php
+	<?php
   endModule(); // Now a function call
 ?>

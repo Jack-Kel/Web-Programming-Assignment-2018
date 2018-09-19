@@ -377,6 +377,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 #centred-login {
+	padding-top: 40vh;
 	padding-left: 50%;
 	padding-right: 50%;
 }
@@ -384,11 +385,13 @@ input[type=number]::-webkit-outer-spin-button {
 .login {
 	font-family: 'Raleway', sans-serif;
 	font-size: 14px;
+	clear: both;
 }
 
-.background-login {
+.background-picture-login {
 	background-image: url(../../../media/snowscape.jpg);
 	background-size: cover;
+	height: 95vh;
 }
 
 .body-products {
@@ -418,7 +421,6 @@ input[type=password] {
 	outline: none;
 	color: #fff;
 	background-color: rgb(247, 170, 0, 0);
-	border: none;
 	border-radius: 15px;
 
 }
@@ -564,6 +566,12 @@ input[type=password] {
 
 .main {
 	width: 100%;
+	height: 100%;
+	clear: both;
+}
+
+.cb {
+	clear: both;
 }
 
 .footer {

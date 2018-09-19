@@ -1,6 +1,15 @@
 <?php
+
+function styleCurrentNavLink( $css ) {
+  $here = $_SERVER['SCRIPT_NAME'];
+  $bits = explode('/',$here);
+  $filename = $bits[count($bits)-1];
+  return "<style>nav a[href$='$filename'] { $css }</style>";
+}
+
   function topModule($pageTitle, $onLoad='') {
-    $output = <<<"TOPSTUFF"
+	  $navcss = styleCurrentNavLink("background-color: #f7aa00; color: #333;");
+      $output = <<<"TOPSTUFF"
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,6 +20,7 @@
 	<link id='stylecss' type="text/css" rel="stylesheet" href="css/stylesheet.css" />
 	<script src='../wireframe.js'></script>
 	<script src="scripts/show-more.js"></script>
+	$navcss
 </head>
 
 <body>
@@ -19,7 +29,7 @@
 		<b class="company-phrase" href="index.php">Jack's House</b>
 		<a href="login.php">Login</a>
 		<a href="products.php">Products</a>
-		<a class="active" href="index.php">Home</a>
+		<a href="index.php">Home</a>
 	</nav>
 
 	<header id="header" class="header">
@@ -29,6 +39,7 @@
 				</a>
 		</div>
 	</header>
+	<div class="cb"></div>
 
 		<main id="main" class="main">
 
@@ -40,6 +51,8 @@ TOPSTUFF;
 	function endModule(){
 
 		$output = <<<"BOTTOMSTUFF"
+
+		</main>
 
 		<footer class="footer">
 		<div>&copy;
