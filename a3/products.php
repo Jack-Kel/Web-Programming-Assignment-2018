@@ -1,33 +1,11 @@
-<!DOCTYPE html>
-<html lang='en'>
+<?php
+  session_start();
+  include_once('tools.php'); // now contains module and other helpful functions
 
-<head>
-	<meta charset="utf-8">
-	<title>The House: Store</title>
-	<link rel="icon" href="../../media/favicon.ico" type="image/gif" sizes="16x16">
-	<link id='wireframecss' type="text/css" rel="stylesheet" href="../wireframe.css"/>
-	<link id='stylecss' type="text/css" rel="stylesheet" href="css/stylesheet.css" />
-	<script src='../wireframe.js'></script>
-</head>
+  // Any POST or GET Request Processing Code goes here
 
-<body class="body-products">
-
-	<nav id="navigation" class="topnav">
-		<b class="company-phrase" href="index.php">Jack's House</b>
-		<a href="login.php">Login</a>
-		<a class="active" href="products.php">Products</a>
-		<a href="index.php">Home</a>
-	</nav>
-
-	<header id="header" class="header">
-		<div class="logo">
-			<a href="products.php">
-			<img class="cool-logo" src="../../media/my-logo.png" alt="logo"/>
-				</a>
-		</div>
-	</header>
-
-	<main class="main">
+  topModule('Products', 'showSpecials()'); // Now a function call
+?>
 		<div class="title-div">
 			<div class="welcome-to-regular">
 				💣 Bomb as merch 💣
@@ -37,25 +15,14 @@
 			</div>
 		</div>
 		<div class="grid-container-products">
-			<div class="grid-item"><a href="hoodie.php">
+			<div class="grid-item"><a href="product.php?product_id=hoodie">
 				<img class="product-picture" src=../../media/placeholder-hoodie.png alt="good-as-hoodie"/> </a></div>
-			<div class="grid-item"><a href="tshirt.php">
+			<div class="grid-item"><a href="product.php?product_id=tee">
 				<img class="product-picture" src=../../media/placeholder-t.png alt="the-T"/></a></div>
-			<div class="grid-item"><a href="mug.php">
+			<div class="grid-item"><a href="product.php?product_id=mug">
 				<img class="product-picture" src=../../media/placeholder-mug.png alt="drink-up-baby"/></a></div>
 		</div>
-	</main>
+	<?php
+  endModule(); // Now a function call
+?>
 
-	<footer class="footer">
-		<div>&copy;
-			<script>
-				document.write(new Date().getFullYear());
-
-			</script> s3707738 and his BombStore&trade;.</div>
-		<div>Disclaimer: This website is not a real website and is being developed as part of a School of Science Web Programming course at RMIT University in Melbourne, Australia.</div>
-		<div><button id='toggleWireframeCSS' onclick='toggleWireframe()'>Toggle Wireframe CSS</button></div>
-	</footer>
-
-</body>
-<script>document.getElementById("wireframecss").disabled=true;</script>
-</html>

@@ -1,54 +1,59 @@
-<!DOCTYPE html>
-<html lang='en'>
+<?php
+  session_start();
+  include_once('tools.php'); // now contains module and other helpful functions
 
-<head>
-	<meta charset="utf-8">
-	<title>Assignment 2</title>
-	<link id='wireframecss' type="text/css" rel="stylesheet" href="../wireframe.css" disabled/>
-	<link id='stylecss' type="text/css" rel="stylesheet" href="css/stylesheet.css" />
-	<script src='../wireframe.js'></script>
-</head>
+  // Any POST or GET Request Processing Code goes here
 
-<body>
+ $rows; $cells;
 
-	<nav id="navigation" class="topnav">
-		<b class="company-phrase" href="index.php">Jack's House</b>
-		<a href="login.php">Login</a>
-		<a class="active" href="products.php">Products</a>
-		<a href="index.php">Home</a>
-	</nav>
+$fp = fopen('products.txt','r');
+  if (($headings = fgetcsv($fp, 0, "\t")) !== false) {
+     while ( $cells = fgetcsv($fp, 0, "\t") ) {
+      for ($x=1; $x<count($cells); $x++)
+         $pumps[$cells[0]][$headings[$x]]=$cells[$x];
+     }
+   }
+   fclose($fp);
 
-	<header id="header" class="header">
-		<div class="logo">
-			<a href="products.php">
-			<img class="cool-logo" src="../../media/fight-milk.png" alt="logo"/>
-				</a>
-		</div>
-		<div class="container">
 
-		</div>
-	</header>
-	<main class="main">
 
-		<div class="grid-container">
-			<div class="grid-item"></div>
-			<div class="grid-item"></div>
-			<div class="grid-item"></div>
-			<div class="grid-item"></div>
-			<div class="grid-item"></div>
-			<div class="grid-item"></div>
-		</div>
-	</main>
-	<footer class="footer">
-		<div>&copy;
-			<script>
-				document.write(new Date().getFullYear());
+global $products;
+$products = array(
+	'mug' => array(
+		'price' => $pumps["Mh"]["Price"],
+		'description' => $pumps["Mh"]["Description"],
+		'image' => "../../media/placeholder-mug.png",
+		'name' => $pumps["Mh"]["Title"],
+		'message' => "the only mug prettier is my own",
+		'opt1' => $pumps["Mh"]["Option"],
+		'opt2' => $pumps["Mb"]["Option"],
 
-			</script> Jack, s3707738 and DollarMerchStore(TM).</div>
-		<div>Disclaimer: This website is not a real website and is being developed as part of a School of Science Web Programming course at RMIT University in Melbourne, Australia.</div>
-		<div><button id='toggleWireframeCSS' onclick='toggleWireframe()'>Toggle Wireframe CSS</button></div>
-	</footer>
+	),
+	'tee' => array(
+		'price' => $pumps["Txs"]["Price"],
+		'description' => $pumps["Txs"]["Description"],
+		'image' => "../../media/placeholder-t.png",
+		'name' => $pumps["Txs"]["Title"],
+		'message' => "two sizes fit all",
+		'opt1' => $pumps["Txs"]["Option"],
+		'opt2' => $pumps["Txl"]["Option"]
+	),
+	'hoodie' => array(
+		'price' => $pumps["Hb"]["Price"],
+		'description' => $pumps["Hb"]["Description"],
+		'image' => "../../media/placeholder-hoodie.png",
+		'name' => $pumps["Hb"]["Title"],
+		'message' => "you've chosen very well",
+		'opt1' => $pumps["Hb"]["Option"],
+		'opt2' => $pumps["Hdb"]["Option"]
+	)
+);
 
-</body>
 
-</html>
+  topModule($_GET["product_id"], 'showSpecials()'); // Now a function call
+
+  product($_GET["product_id"]);
+
+  endModule(); // Now a function call
+
+?>

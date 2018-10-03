@@ -13,3 +13,23 @@ plusButton.addEventListener('click', function () {
 	const currentValue = Number(inputField.value) || 0;
 	inputField.value = currentValue + 1;
 });
+
+function updateTotal(p1){
+
+	var p2 = p1;
+	document.getElementById("subtotal").value = p2*document.getElementById("input").value;
+}
+
+function updateTotalM(p1){
+
+	var p2 = p1;
+	document.getElementById("subtotal").value = p2*document.getElementById("input").value + p2;
+}
+
+function updateTotalP(p1){
+
+	var p2 = p1;
+	document.getElementById("subtotal").value = p2*document.getElementById("input").value - p2;
+}
+
+

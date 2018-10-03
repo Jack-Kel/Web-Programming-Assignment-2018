@@ -388,13 +388,13 @@ input[type=number]::-webkit-outer-spin-button {
 	clear: both;
 }
 
-.background-picture-login {
+#Login {
 	background-image: url(../../../media/snowscape.jpg);
 	background-size: cover;
 	height: 95vh;
 }
 
-.body-products {
+#Products {
 	background-image: url(../../../media/sea.jpg);
 	background-size: cover;
 }
@@ -608,4 +608,42 @@ input[type=password] {
 .grid-buy-stuff {
 	grid-area: main;
 	padding-bottom: 30%;
+}
+
+#grid-cart{
+	grid-template-areas: 	'header header header header'
+							'cart cart cart cart'
+							'footer footer footer footer';
+	align-content: center;
+	height: 85vh;
+	background-image: url(../../../media/shoppingcart.jpg)
+}
+
+.topstuff{
+	grid-area: header;
+	margin-top: 16vh;
+}
+
+.bodystuff{
+	grid-area: cart;
+	height: 50vh;
+}
+
+.footerstuff{
+	grid-area: footer;
+}
+
+.table{
+	width: 80vh;
+	margin-top: 25vh;
+	margin-left: 25%;
+	margin-right: 45%;
+}
+
+table, td, th {
+	border: 2px solid black;
+	border-collapse: collapse;
+	color: palevioletred;
+	font-size: 24px;
+	background-color: purple;
 }
