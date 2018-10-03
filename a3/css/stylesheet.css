@@ -647,3 +647,20 @@ table, td, th {
 	font-size: 24px;
 	background-color: purple;
 }
+
+#cancel-button{
+	align-content: center;
+	margin-left: 30%;
+	margin-right: 60%;
+	display: inline-block;
+	position: absolute;
+
+}
+
+#checkout-button{
+	align-content: center;
+	margin-left: 60%;
+	margin-right: 30%;
+	display: inline-block;
+	position: absolute;
+}

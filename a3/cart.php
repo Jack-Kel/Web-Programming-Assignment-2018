@@ -44,49 +44,78 @@ if (isset($_POST['id'], $_POST['qty'], $_POST['oid'])) {
 			</tr>
 			<tr>
 				<td>Mug</td>
-				<td>Big</td>
+				<td>Huge</td>
 				<td><?php
-					echo $_SESSION['cart']["mug"]["opt1"]['qty'];
+					if (isset($_SESSION['cart']['mug']["opt1"]['qty'])){
+					echo $_SESSION['cart']["mug"]["opt1"]['qty'];}
+					else {
+						echo "0";
+					}
 					?></td>
 			</tr>
 			<tr>
 				<td>Mug</td>
-				<td>Huge</td>
+				<td>Big</td>
 				<td><?php
-					echo $_SESSION['cart']['mug']["opt2"]['qty'];
+					if (isset($_SESSION['cart']['mug']["opt2"]['qty'])){
+					echo $_SESSION['cart']['mug']["opt2"]['qty'];}
+					else {
+						echo "0";
+					}
 					?></td>
 			</tr>
 			<tr>
 				<td>Tee</td>
-				<td>White</td>
+				<td>XS</td>
 				<td><?php
-					echo $_SESSION['cart']['tee']["opt1"]['qty'];
+					if (isset($_SESSION['cart']['tee']["opt1"]['qty'])){
+					echo $_SESSION['cart']['tee']["opt1"]['qty'];}
+					else {
+						echo "0";
+					}
 					?></td>
 			</tr>
 			<tr>
 				<td>Tee</td>
-				<td>Eggshell</td>
+				<td>XL</td>
 				<td><?php
-					echo $_SESSION['cart']['tee']["opt2"]['qty'];
+					if (isset($_SESSION['cart']['tee']["opt2"]['qty'])){
+					echo $_SESSION['cart']['tee']["opt2"]['qty'];}
+					else {
+						echo "0";
+					}
 					?></td>
 			</tr>
 			<tr>
 				<td>Hood</td>
 				<td>Black</td>
 				<td><?php
-					echo $_SESSION['cart']["hoodie"]["opt1"]['qty'];
+					if (isset($_SESSION['cart']['hoodie']["opt1"]['qty'])){
+					echo $_SESSION['cart']["hoodie"]["opt1"]['qty'];}
+					else {
+						echo "0";
+					}
 					?></td>
 			</tr>
 			<tr>
 				<td>Hood</td>
 				<td>Darker Black</td>
 				<td><?php
-					echo $_SESSION['cart']["hoodie"]["opt2"]['qty'];
+					if (isset($_SESSION['cart']['hoodie']["opt2"]['qty'])){
+					echo $_SESSION['cart']["hoodie"]["opt2"]['qty'];}
+					else {
+						echo "0";
+					}
 					?></td>
 			</tr>
 		</table>
 
+			<div class="sumbit-cancel"> <form name="cancel" action="products.php" method="post">
+				<input type="hidden" name="cancel" value="cancel">
+					   <button class="buy-button" id="cancel-button" type="submit">Cancel</button></form>
 
+			<form name="checkout" action="checkout.php" method="post">
+					   <button class="buy-button" id="checkout-button" type="submit">Checkout</button></form></div>
 
 		</div>
 		<div class="footerstuff"></div>

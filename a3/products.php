@@ -1,8 +1,9 @@
 <?php
   session_start();
   include_once('tools.php'); // now contains module and other helpful functions
-
-  // Any POST or GET Request Processing Code goes here
+if (isset($_POST['cancel'])){
+	unset($_SESSION['cart']);
+}
 
   topModule('Products', 'showSpecials()'); // Now a function call
 ?>
