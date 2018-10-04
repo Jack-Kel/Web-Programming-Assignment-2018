@@ -4,7 +4,7 @@
 
   // Any POST or GET Request Processing Code goes here
 
-  topModule('Login', 'showSpecials()'); // Now a function call
+  topModule('login', 'showSpecials()'); // Now a function call
 ?>
 <div class="background-picture-login">
 		<div class="centred-login" id="centred-login">

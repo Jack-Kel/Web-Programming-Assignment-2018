@@ -5,7 +5,7 @@ if (isset($_POST['cancel'])){
 	unset($_SESSION['cart']);
 }
 
-  topModule('Products', 'showSpecials()'); // Now a function call
+  topModule('products', 'showSpecials()'); // Now a function call
 ?>
 		<div class="title-div">
 			<div class="welcome-to-regular">

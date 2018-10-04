@@ -28,7 +28,7 @@ if (isset($_POST['id'], $_POST['qty'], $_POST['oid'])) {
 }
 
 
-  topModule('Cart', 'showSpecials()'); // Now a function call
+  topModule('cart', 'showSpecials()'); // Now a function call
 
 ?>
 
@@ -114,7 +114,7 @@ if (isset($_POST['id'], $_POST['qty'], $_POST['oid'])) {
 				<input type="hidden" name="cancel" value="cancel">
 					   <button class="buy-button" id="cancel-button" type="submit">Cancel</button></form>
 
-			<form name="checkout" action="checkout.php" method="post">
+			<form name="checkout" action="checkout.php" method="get">
 					   <button class="buy-button" id="checkout-button" type="submit">Checkout</button></form></div>
 
 		</div>
@@ -123,7 +123,5 @@ if (isset($_POST['id'], $_POST['qty'], $_POST['oid'])) {
 	</div>
 
 	<?php
-
-
   endModule(); // Now a function call
 ?>

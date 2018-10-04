@@ -4,7 +4,7 @@
 
   // Any POST or GET Request Processing Code goes here
 
-  topModule('Home', 'showSpecials()'); // Now a function call
+  topModule('home', 'showSpecials()'); // Now a function call
 ?>
 		<div class="welcome-message">Welcome to the house that I built.
 			<div class="show-more" id="show-more"> <button class="initial-button" id="show-more-link" type="button" onclick="javascript:showMore()">&#751; &#751; &#751;</button>
