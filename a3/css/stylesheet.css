@@ -610,37 +610,37 @@ input[type=password] {
 	padding-bottom: 30%;
 }
 
-#grid-cart{
-	grid-template-areas: 	'header header header header'
-							'cart cart cart cart'
-							'footer footer footer footer';
+#grid-cart {
+	grid-template-areas: 'header header header header' 'cart cart cart cart' 'footer footer footer footer';
 	align-content: center;
 	height: 85vh;
 	background-image: url(../../../media/shoppingcart.jpg)
 }
 
-.topstuff{
+.topstuff {
 	grid-area: header;
 	margin-top: 16vh;
 }
 
-.bodystuff{
+.bodystuff {
 	grid-area: cart;
 	height: 50vh;
 }
 
-.footerstuff{
+.footerstuff {
 	grid-area: footer;
 }
 
-.table{
+.table {
 	width: 80vh;
 	margin-top: 25vh;
 	margin-left: 25%;
 	margin-right: 45%;
 }
 
-table, td, th {
+table,
+td,
+th {
 	border: 2px solid black;
 	border-collapse: collapse;
 	color: palevioletred;
@@ -648,7 +648,7 @@ table, td, th {
 	background-color: purple;
 }
 
-#cancel-button{
+#cancel-button {
 	align-content: center;
 	margin-left: 30%;
 	margin-right: 60%;
@@ -657,101 +657,118 @@ table, td, th {
 
 }
 
-#checkout-button{
+#checkout-button {
 	align-content: center;
 	margin-left: 60%;
 	margin-right: 30%;
 	display: inline-block;
 	position: absolute;
 }
+
 .row {
-  display: -ms-flexbox; /* IE10 */
-  display: flex;
-  -ms-flex-wrap: wrap; /* IE10 */
-  flex-wrap: wrap;
-  margin: 0 -16px;
+	display: -ms-flexbox;
+	/* IE10 */
+	display: flex;
+	-ms-flex-wrap: wrap;
+	/* IE10 */
+	flex-wrap: wrap;
+	margin: 0 -16px;
 	margin-top: 10vh;
+
 }
 
 .col-25 {
-  -ms-flex: 25%; /* IE10 */
-  flex: 25%;
+	-ms-flex: 25%;
+	/* IE10 */
+	flex: 25%;
 }
 
 .col-50 {
-  -ms-flex: 50%; /* IE10 */
-  flex: 50%;
+	-ms-flex: 50%;
+	/* IE10 */
+	flex: 50%;
 }
 
 .col-75 {
-  -ms-flex: 75%; /* IE10 */
-  flex: 75%;
+	-ms-flex: 75%;
+	/* IE10 */
+	flex: 75%;
 }
 
 .col-25,
 .col-50,
 .col-75 {
-  padding: 0 16px;
+	padding: 0 16px;
 }
 
 .container-checkout {
-  background-color: #f2f2f2;
-  padding: 5px 20px 15px 20px;
-  border: 1px solid lightgrey;
-  border-radius: 3px;
+	background-color: #f2f2f2;
+	padding: 5px 20px 15px 20px;
+	border: 1px solid lightgrey;
+	border-radius: 3px;
 }
 
-input[type=text],[type=email],[type=month] {
-  width: 99%;
-  margin-bottom: 20px;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 3px;
+input[type=text],
+[type=email],
+[type=month] {
+	width: 99%;
+	margin-bottom: 20px;
+	padding: 12px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
 }
+
+
 
 label {
-  margin-bottom: 10px;
-  display: block;
+	margin-bottom: 10px;
+	display: block;
 }
 
 .icon-container {
-  margin-bottom: 20px;
-  padding: 7px 0;
-  font-size: 24px;
+	margin-bottom: 20px;
+	padding: 7px 0;
+	font-size: 24px;
 }
 
 .btn {
-  background-color: #ffdb58;
-  color: slategray;
-  padding: 12px;
-  margin: 10px 0;
-  border: none;
-  width: 100%;
-  border-radius: 3px;
-  cursor: pointer;
-  font-size: 17px;
+	background-color: #ffdb58;
+	color: slategray;
+	padding: 12px;
+	margin: 10px 0;
+	border: none;
+	width: 100%;
+	border-radius: 3px;
+	cursor: pointer;
+	font-size: 17px;
 	margin-bottom: 10vh;
 }
 
 .btn:hover {
-  background-color: #45a049;
+	background-color: #45a049;
 }
 
 span.price {
-  float: right;
-  color: grey;
+	float: right;
+	color: grey;
 }
 
 /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (and change the direction - make the "cart" column go on top) */
+
 @media (max-width: 800px) {
-  .row {
-    flex-direction: column-reverse;
-  }
-  .col-25 {
-    margin-bottom: 20px;
-  }
+	.row {
+		flex-direction: column-reverse;
+	}
+	.col-25 {
+		margin-bottom: 20px;
+	}
 }
 
-.error{
+.error {
 	color: red;
+}
+
+.textarea-address{
+	width: 99%;
+	height: 7vh;
 }
