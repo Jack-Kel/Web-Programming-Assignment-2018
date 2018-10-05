@@ -3,89 +3,86 @@
   include_once('tools.php');
 //variables for error messages
 
-$nameError = $emailError = $phoneError = $addError = $cNameError = $cardError = $dateError = $ccvError = "";
+$nameError = $emailError = $phoneError = $addError = $cardError = $dateError = $ccvError = "";
 
-$name = $email = $phone = $add = $cName = $card = $date = $ccv = "";
+$continue = "true";
+
+$name = $email = $phone = $add = $card = $date = $ccv = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST"){
-	var_dump($_POST);
+	$continue = "true";
+	//var_dump($_POST);
 	if(empty($_POST["firstname"])){
 		$nameError = "required";
+		$continue = "false";
 	}
 	elseif(!preg_match("/^[a-z ,.'-]+$/i", $_POST["firstname"], $match)){
 		$nameError = "Name invalid";
+		$continue = "false";
 	}
 	else{
 		$name = test_input($_POST["firstname"]);
 	}
 	if(empty($_POST["email"])){
 		$emailError = "required";
+		$continue = "false";
 	}
 	elseif (!filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)) {
 		$emailError = "Email invalid";
+		$continue = "false";
 	}
 	else{
 		$email = test_input($_POST["email"]);
 	}
 	if(empty($_POST["mobile"])){
 		$phoneError = "required";
+		$continue = "false";
 	}
 	else if(!preg_match("/^(\(04\)|04|\+614)( ?\d){8}$/i", $_POST["mobile"], $match)){
 		$phoneError = "Number invalid";
+		$continue = "false";
 	}
 	else{
 		$phone = test_input($_POST["mobile"]);
 	}
 	if(empty($_POST["address"])){
 		$addError = "required";
+		$continue = "false";
 	}
 	elseif(!preg_match("/^[a-z\d\/ \r\n,.'-]+$/i", $_POST["address"], $match)){
 		$addError = "Address invalid";
+		$continue = "false";
 	}
 	else{
 		$add = $_POST["address"];
 	}
-	if(empty($_POST["city"])){
-		$cityError = "required";
-	}
-	else {
-		$city =test_input($_POST["city"]);
-	}
-	if(empty($_POST["state"])){
-		$stateError = "required";
-	}
-	else{
-		$state = test_input($_POST["state"]);
-	}
-	if(empty($_POST["zip"])){
-		$postError = "required";
-	}
-	else{
-		$post = test_input($_POST["zip"]);
-	}
-	if(empty($_POST["cardname"])){
-		$cNameError = "required";
-	}
-	else{
-		$cName = test_input($_POST["cardname"]);
-	}
 	if(empty($_POST["cardnumber"])){
 		$cardError = "required";
+		$continue = "false";
+	}
+	elseif(!preg_match("/^( ?\d){12,19}$/", $_POST["cardnumber"], $match)){
+		$cardError = "Card invalid";
+		$continue = "false";
 	}
 	else{
 		$card = test_input($_POST["cardnumber"]);
 	}
 	if(empty($_POST["expiry"])){
 		$dateError = "required";
+		$continue = "false";
 	}
 	else{
 		$date = test_input($_POST["expiry"]);
 	}
 	if(empty($_POST["ccv"])){
 		$ccvError = "required";
+		$continue = "false";
 	}
 	else{
 		$ccv = test_input($_POST["ccv"]);
+	}
+	if($continue == "true"){
+		header("Location: receipt.php");
 	}
 }
 
@@ -118,9 +115,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 
 						<div class="col-50">
 							<h3>Card Details</h3>
-
-							<label for="cname">Name on Card <span class="error">* <?php echo $cNameError; ?></span></label>
-							<input type="text" id="cname" name="cardname" placeholder="Dan Daniels" value='<?php echo $cname ?>'>
 
 							<label for="ccnum">Credit card number <span class="error">* <?php echo $cardError; ?> </span></label>
 							<input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444" value='<?php echo $card ?>'>

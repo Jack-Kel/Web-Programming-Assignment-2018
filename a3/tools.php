@@ -74,7 +74,7 @@ exit();
 	<div class="new-product-grid">
 			<div class="grid-p-image">
 				<div class="buy-it-text">
-					$p_desc $p_pric
+					$p_desc \$$p_pric
 				</div>
 				<div class="product-image">
 					<img src=$p_imag alt="product" />
