@@ -3,7 +3,7 @@
   include_once('tools.php');
 //variables for error messages
 
-$nameError = $emailError = $phoneError = $addError = $cardError = $dateError = $ccvError = "";
+$nameError = $emailError = $phoneError = $addError = $cardError = $dateError = $ccvError = "*";
 
 $continue = "true";
 
@@ -104,16 +104,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 							<h3>Billing Address</h3>
 							<span class="error">* required field</span>
 
-							<label for="fname"><i class="fa fa-user"></i> Full Name <span class="error">*<?php echo $nameError; ?></span></label>
+							<label for="fname"><i class="fa fa-user"></i> Full Name <span class="error"><?php echo $nameError; ?></span></label>
 							<input type="text" id="fname" name="firstname" placeholder="Dan Daniels" value='<?php echo $name; ?>'>
 
-							<label for="email"><i class="fa fa-envelope"></i> Email <span class="error">*<?php echo $emailError; ?></span></label>
+							<label for="email"><i class="fa fa-envelope"></i> Email <span class="error"><?php echo $emailError; ?></span></label>
 							<input type="email" id="email" name="email" placeholder="dan@example.com" value='<?php echo $email;?>' >
 
-							<label for="fmob"><i class="fa fa-mobile"></i> Phone Number <span class="error">*<?php echo $phoneError; ?></span></label>
+							<label for="fmob"><i class="fa fa-mobile"></i> Phone Number <span class="error"><?php echo $phoneError; ?></span></label>
 							<input type="text" id="fmob" name="mobile" placeholder="XXXX XXX XXX" value='<?php echo $phone; ?>' >
 
-							<label for="adr"><i class="fa fa-address-card-o"></i> Address <span class="error">*<?php echo $addError; ?></span></label>
+							<label for="adr"><i class="fa fa-address-card-o"></i> Address <span class="error"><?php echo $addError; ?></span></label>
 							<textarea form="checkoutForm" class="textarea-address" id="address" name="address" placeholder="Your Address"><?php echo "$add"; ?></textarea>
 
 						</div>
@@ -121,14 +121,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 						<div class="col-50">
 							<h3>Card Details</h3>
 
-							<label for="ccnum">Credit card number <span class="error">* <?php echo $cardError; ?> <img src="../../media/visa-pic.svg" id="ccimg"> </span></label>
+							<label for="ccnum">Credit card number <span class="error"> <?php echo $cardError; ?> <img src="../../media/visa-pic.svg" id="ccimg"> </span></label>
 							<input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444" oninput="cardCheck()" value='<?php echo $card ?>'>
 
-							<label for="expmonth">Exp <span class="error">* <?php echo $dateError; ?></span></label>
+							<label for="expmonth">Exp <span class="error"> <?php echo $dateError; ?></span></label>
 							<input type="Month" id="expiry" name="expiry" placeholder="01/10"value='<?php echo $date ?>'>
 						</div>
 						<div class="col-50">
-							<label for="ccv">CVV <span class="error">* <?php echo $ccvError; ?></span></label>
+							<label for="ccv">CVV <span class="error"> <?php echo $ccvError; ?></span></label>
 							<input type="text" id="ccv" name="ccv" placeholder="XXX" value='<?php echo $ccv ?>'>
 						</div>
 
