@@ -21,8 +21,7 @@ if (isset($_POST['id'], $_POST['qty'], $_POST['oid'])) {
 	}
 
 }
-	//var_dump($_SESSION);
-	print_r($_SESSION['cart']['mug']['opt2']['qty']);
+
 }else {
 	header("Location: products.php", true, 301);
 }
@@ -111,7 +110,8 @@ if (isset($_POST['id'], $_POST['qty'], $_POST['oid'])) {
 			} ?>
 		</table>
 
-			<div class="sumbit-cancel"> <form name="cancel" action="products.php" method="post">
+			<div class="sumbit-cancel">
+				<form name="cancel" action="products.php" method="post">
 				<input type="hidden" name="cancel" value="cancel">
 					   <button class="buy-button" id="cancel-button" type="submit">Cancel</button></form>
 
