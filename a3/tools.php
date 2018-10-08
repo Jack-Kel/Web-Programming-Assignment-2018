@@ -164,7 +164,8 @@ PRODUCTSTUFF;
 
 
  function endModule(){
-
+$session = preShow($_SESSION, true);
+	 $post = preShow($_POST, true);
 		$output = <<<"BOTTOMSTUFF"
 
 		</main>
@@ -178,7 +179,7 @@ PRODUCTSTUFF;
 		<div>Disclaimer: This website is not a real website and is being developed as part of a School of Science Web Programming course at RMIT University in Melbourne, Australia.</div>
 		<div><button id='toggleWireframeCSS' onclick='toggleWireframe()'>Toggle Wireframe CSS</button></div>
 	</footer>
-
+$post $session
 </body>
 <script src='scripts/button.js'></script>
 <script>document.getElementById("wireframecss").disabled=true;</script>
@@ -219,6 +220,33 @@ function test_input($data) {
   return $data;
 }
 
+function preShow( $arr, $returnAsString=false ) {
+  $ret  = '<pre>' . print_r($arr, true) . '</pre>';
+  if ($returnAsString)
+    return $ret;
+  else
+    echo $ret;
+}
+
+function printMyCode() {
+  $lines = file($_SERVER['SCRIPT_FILENAME']);
+  echo "<pre class='mycode'>\n";
+  foreach ($lines as $lineNo => $lineOfCode)
+     printf("%3u: %1s \n", $lineNo, rtrim(htmlentities($lineOfCode)));
+  echo "</pre>";
+}
+
+function php2js( $arr, $arrName ) {
+  $lineEnd="";
+  echo "<script>\n";
+  echo "  var $arrName = {\n";
+  foreach ($arr as $key => $value) {
+    echo "$lineEnd    $key : $value";
+    $lineEnd = ",\n";
+  }
+  echo "  \n};\n";
+  echo "</script>\n\n";
+}
 
 
 ?>
