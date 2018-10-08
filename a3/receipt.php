@@ -3,7 +3,7 @@ session_start();
 include_once('tools.php');
 $products = $GLOBAL['products'];
 setProducts();
-$file = fopen("products.txt", "a+");
+$file = fopen("orders.txt", "a+");
 $write = "Purchase Date	Name	Address	Mobile	Email	ID	OID	Quantity	Unit Price	Subtotal";
 $counter = 0;
 $totalCost = 0;

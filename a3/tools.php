@@ -165,7 +165,7 @@ PRODUCTSTUFF;
 
  function endModule(){
 $session = preShow($_SESSION, true);
-	 $post = preShow($_POST, true);
+$post = preShow($_POST, true);
 		$output = <<<"BOTTOMSTUFF"
 
 		</main>
