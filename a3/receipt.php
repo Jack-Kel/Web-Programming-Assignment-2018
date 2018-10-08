@@ -33,8 +33,6 @@ $email = $_SESSION['info']['email'];
 	";
 
 	foreach ($_SESSION["cart"] as $cart){
-		echo array_keys($_SESSION["cart"]);
-		die();
 		$id = (array_keys($_SESSION["cart"]))[$counter];
 		$idDisp = $products[$id]["name"];
 		$break = 1;
