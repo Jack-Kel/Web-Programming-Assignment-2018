@@ -575,7 +575,7 @@ input[type=password] {
 
 .footer {
 	background-color: rgb(229, 229, 229, 0.2);
-	position: absolute;
+	position: relative;
 	bottom: 10;
 	width: 100%
 }
