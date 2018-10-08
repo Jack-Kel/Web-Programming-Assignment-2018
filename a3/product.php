@@ -18,6 +18,7 @@ $fp = fopen('products.txt','r');
 
 
 global $products;
+
 $products = array(
 	'mug' => array(
 		'price' => $pumps["Mh"]["Price"],

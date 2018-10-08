@@ -100,3 +100,24 @@ body {
 	font-size: 20px;
 	text-align: center;
 }
+
+.table {
+	width: 80vh;
+	margin-top: 25vh;
+	margin-left: 25%;
+	margin-right: 45%;
+}
+
+table,
+td,
+th {
+	border: 2px solid black;
+	border-collapse: collapse;
+	color: palevioletred;
+	font-size: 24px;
+	background-color: purple;
+}
+
+.got-em{
+	padding-top: 10vh;
+}

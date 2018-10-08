@@ -34,6 +34,7 @@ if (isset($_POST['id'], $_POST['qty'], $_POST['oid'])) {
 
 
 	<div class="container" id="grid-cart">
+
 		<div class="topstuff"></div>
 		<div class="bodystuff">
 		<table class="table">
@@ -42,72 +43,72 @@ if (isset($_POST['id'], $_POST['qty'], $_POST['oid'])) {
 				<th>Option</th>
 				<th>Quantity</th>
 			</tr>
-			<tr>
+			<?php
+			if (isset($_SESSION['cart']['mug']["opt1"]['qty'])){
+			echo "<tr>
 				<td>Mug</td>
 				<td>Huge</td>
-				<td><?php
-					if (isset($_SESSION['cart']['mug']["opt1"]['qty'])){
-					echo $_SESSION['cart']["mug"]["opt1"]['qty'];}
-					else {
-						echo "0";
-					}
-					?></td>
-			</tr>
-			<tr>
+				<td>";
+
+			echo $_SESSION['cart']["mug"]["opt1"]['qty'];
+					echo "</td>
+			</tr>";
+			} ?>
+			<?php
+			if (isset($_SESSION['cart']['mug']["opt2"]['qty'])){
+			echo "<tr>
 				<td>Mug</td>
 				<td>Big</td>
-				<td><?php
-					if (isset($_SESSION['cart']['mug']["opt2"]['qty'])){
-					echo $_SESSION['cart']['mug']["opt2"]['qty'];}
-					else {
-						echo "0";
-					}
-					?></td>
-			</tr>
-			<tr>
+				<td>";
+
+			echo $_SESSION['cart']["mug"]["opt2"]['qty'];
+					echo "</td>
+			</tr>";
+			} ?>
+			<?php
+			if (isset($_SESSION['cart']['tee']["opt1"]['qty'])){
+			echo "<tr>
 				<td>Tee</td>
 				<td>XS</td>
-				<td><?php
-					if (isset($_SESSION['cart']['tee']["opt1"]['qty'])){
-					echo $_SESSION['cart']['tee']["opt1"]['qty'];}
-					else {
-						echo "0";
-					}
-					?></td>
-			</tr>
-			<tr>
+				<td>";
+
+			echo $_SESSION['cart']["tee"]["opt1"]['qty'];
+					echo "</td>
+			</tr>";
+			} ?>
+			<?php
+			if (isset($_SESSION['cart']['tee']["opt2"]['qty'])){
+			echo "<tr>
 				<td>Tee</td>
 				<td>XL</td>
-				<td><?php
-					if (isset($_SESSION['cart']['tee']["opt2"]['qty'])){
-					echo $_SESSION['cart']['tee']["opt2"]['qty'];}
-					else {
-						echo "0";
-					}
-					?></td>
-			</tr>
-			<tr>
+				<td>";
+
+			echo $_SESSION['cart']["tee"]["opt2"]['qty'];
+					echo "</td>
+			</tr>";
+			} ?>
+			<?php
+			if (isset($_SESSION['cart']['hoodie']["opt1"]['qty'])){
+			echo "<tr>
 				<td>Hood</td>
 				<td>Black</td>
-				<td><?php
-					if (isset($_SESSION['cart']['hoodie']["opt1"]['qty'])){
-					echo $_SESSION['cart']["hoodie"]["opt1"]['qty'];}
-					else {
-						echo "0";
-					}
-					?></td>
-			</tr>
-			<tr>
+				<td>";
+
+			echo $_SESSION['cart']["hoodie"]["opt1"]['qty'];
+					echo "</td>
+			</tr>";
+			} ?>
+			<?php
+			if (isset($_SESSION['cart']['hoodie']["opt2"]['qty'])){
+			echo "<tr>
 				<td>Hood</td>
-				<td>Darker Black</td>
-				<td><?php
-					if (isset($_SESSION['cart']['hoodie']["opt2"]['qty'])){
-					echo $_SESSION['cart']["hoodie"]["opt2"]['qty'];}
-					else {
-						echo "0";
-					}
-					?></td>
-			</tr>
+				<td>Dark Black</td>
+				<td>";
+
+			echo $_SESSION['cart']["hoodie"]["opt2"]['qty'];
+					echo "</td>
+			</tr>";
+			} ?>
 		</table>
 
 			<div class="sumbit-cancel"> <form name="cancel" action="products.php" method="post">
