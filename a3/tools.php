@@ -54,8 +54,9 @@ function setProducts(){
 $fp = fopen('products.txt','r');
   if (($headings = fgetcsv($fp, 0, "\t")) !== false) {
      while ( $cells = fgetcsv($fp, 0, "\t") ) {
-      for ($x=1; $x<count($cells); $x++)
+      for ($x=1; $x<count($cells); $x++){
          $pumps[$cells[0]][$headings[$x]]=$cells[$x];
+	 }
      }
    }
    fclose($fp);
