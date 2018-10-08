@@ -5,6 +5,8 @@ if (isset($_POST['cancel'])){
 	unset($_SESSION['cart']);
 }
 
+  setProducts(); //sets all products
+
   topModule('products', 'showSpecials()'); // Now a function call
 ?>
 		<div class="title-div">

@@ -86,7 +86,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 		$ccv = test_input($_POST["ccv"]);
 	}
 	if($continue == "true"){
-		$_SESSION['info']['date'] = date();
+		$_SESSION['info']['date'] = date('m/d/Y h:i:s a', time());
 		header("Location: receipt.php");
 	}
 }
@@ -121,8 +121,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 						<div class="col-50">
 							<h3>Card Details</h3>
 
-							<label for="ccnum">Credit card number <span class="error">* <?php echo $cardError; ?> </span></label>
-							<input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444" value='<?php echo $card ?>'>
+							<label for="ccnum">Credit card number <span class="error">* <?php echo $cardError; ?> <img src="../../media/visa-pic.svg" id="ccimg"> </span></label>
+							<input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444" oninput="cardCheck()" value='<?php echo $card ?>'>
 
 							<label for="expmonth">Exp <span class="error">* <?php echo $dateError; ?></span></label>
 							<input type="month" id="expiry" name="expiry" placeholder="01/10"value='<?php echo $date ?>'>

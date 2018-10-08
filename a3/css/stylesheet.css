@@ -643,9 +643,9 @@ td,
 th {
 	border: 2px solid black;
 	border-collapse: collapse;
-	color: palevioletred;
+	color: goldenrod;
 	font-size: 24px;
-	background-color: purple;
+	background-color: lightslategray;
 }
 
 #cancel-button {
@@ -771,4 +771,9 @@ span.price {
 .textarea-address{
 	width: 99%;
 	height: 7vh;
+}
+#ccimg{
+	height: 16px;
+	width: auto;
+	visibility: hidden;
 }

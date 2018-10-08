@@ -5,3 +5,12 @@ function submit_form() {
 		return false;
 	}
 }
+
+function cardCheck() {
+	var img = document.getElementById('ccimg');
+	if (document.getElementById('ccnum').value.charAt(0) == 4){
+		img.style.visibility = 'visible';
+	}else {
+		img.style.visibility = 'hidden';
+	}
+}
