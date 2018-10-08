@@ -11,7 +11,7 @@ function styleCurrentNavLink( $css ) {
 	  $navcss = styleCurrentNavLink("background-color: #f7aa00; color: #333;");
       $output = <<<"TOPSTUFF"
 <!DOCTYPE html>
-<html>
+<html id="$pageTitle">
 <head>
 	<meta charset="utf-8">
 	<title> $pageTitle </title>
@@ -42,7 +42,7 @@ function styleCurrentNavLink( $css ) {
 	</header>
 	<div class="cb"></div>
 
-		<main class="main" id="$pageTitle">
+		<main class="main">
 
 TOPSTUFF;
     echo $output;
