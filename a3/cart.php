@@ -13,14 +13,7 @@ if (isset($_POST['id'], $_POST['qty'], $_POST['oid'])) {
 
   $_SESSION['cart'][$id]['oid'] = $_POST['oid'];
   $_SESSION['cart'][$id][$_POST['oid']]['qty'] = $_POST['qty'];
-	foreach($_SESSION['cart'] as $cart){
-	$rows++;
-	foreach($_SESSION['hoodie'][$id] as $id){
-		$columns++;
 
-	}
-
-}
 
 }else {
 	header("Location: products.php", true, 301);
