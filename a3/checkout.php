@@ -22,6 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 	}
 	else{
 		$name = test_input($_POST["firstname"]);
+		$_SESSION['info']['name'] = $name;
 	}
 	if(empty($_POST["email"])){
 		$emailError = "required";
@@ -33,6 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 	}
 	else{
 		$email = test_input($_POST["email"]);
+		$_SESSION['info']['email'] = $email;
 	}
 	if(empty($_POST["mobile"])){
 		$phoneError = "required";
@@ -44,6 +46,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 	}
 	else{
 		$phone = test_input($_POST["mobile"]);
+		$_SESSION['info']['phone'] = $phone;
 	}
 	if(empty($_POST["address"])){
 		$addError = "required";
@@ -55,6 +58,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 	}
 	else{
 		$add = $_POST["address"];
+		$_SESSION['info']['add'] = $add;
 	}
 	if(empty($_POST["cardnumber"])){
 		$cardError = "required";
@@ -82,6 +86,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 		$ccv = test_input($_POST["ccv"]);
 	}
 	if($continue == "true"){
+		$_SESSION['info']['date'] = date();
 		header("Location: receipt.php");
 	}
 }

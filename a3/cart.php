@@ -113,7 +113,7 @@ if (isset($_POST['id'], $_POST['qty'], $_POST['oid'])) {
 			<div class="sumbit-cancel">
 				<form name="cancel" action="products.php" method="post">
 				<input type="hidden" name="cancel" value="cancel">
-					   <button class="buy-button" id="cancel-button" type="submit">Cancel</button></form>
+					   <button class="buy-button" id="cancel-button" type="submit">Clear Cart</button></form>
 
 			<form name="checkout" action="checkout.php" method="get">
 					   <button class="buy-button" id="checkout-button" type="submit">Checkout</button></form></div>

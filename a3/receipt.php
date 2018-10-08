@@ -1,14 +1,17 @@
 <?php
 session_start();
 include_once('tools.php');
-
 $products = $GLOBAL['products'];
 setProducts();
-$file = fopen("products.txt", "r+");
+$file = fopen("products.txt", "a+");
 $write = "Purchase Date	Name	Address	Mobile	Email	ID	OID	Quantity	Unit Price	Subtotal";
 $counter = 0;
 $totalCost = 0;
-
+$date = $_SESSION['info']['date'];
+$name = $_SESSION['info']['name'];
+$address = $_SESSION['info']['add'];
+$mobile = $_SESSION['info']['phone'];
+$email = $_SESSION['info']['email'];
 
 ?>
 
@@ -16,12 +19,8 @@ $totalCost = 0;
 
 <?php
 
-//var_dump($_SESSION);
-
-foreach ($_SESSION as $session)
-  {
 	echo "<!DOCTYPE html>";
-	echo "<div class='welcome-message'> Thanks for the money, idiot";
+	echo "<div class='welcome-message'> Thanks for the money";
 	echo "<div class='container'>";
 	echo "<table class='table'>
 		<tr>
@@ -32,7 +31,7 @@ foreach ($_SESSION as $session)
 
 	";
 
-	foreach ($session as $cart){
+	foreach ($_SESSION["cart"] as $cart){
 		$id = (array_keys($_SESSION["cart"]))[$counter];
 		$idDisp = $products[$id]["name"];
 		$break = 1;
@@ -49,12 +48,15 @@ foreach ($_SESSION as $session)
 			}
 
 			$totalCost += $cost;
+			$info = array($date, $name, $address, $mobile, $email, $idDisp, $oidDisp, $qty, $products[$id]["price"], $cost);
 
 			echo "<tr>
 			<td>$idDisp</th>
 			<td>$oidDisp</th>
 			<td>$qty</th>
 		</tr>";
+
+			fputcsv($file, $info);
 
 			++$break;
 
@@ -72,6 +74,7 @@ foreach ($_SESSION as $session)
 	echo "<div class='got-em'>Your Cost: \$$totalCost</div>";
 	echo "</div>";
 
-	}
+
+fclose($file);
 
 ?>
