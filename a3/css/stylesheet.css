@@ -397,7 +397,7 @@ input[type=number]::-webkit-outer-spin-button {
 #products {
 	background-image: url(../../../media/sea.jpg);
 	background-size: cover;
-	height: 1817.420px;
+	height: 100%;
 }
 
 /* Full-width input fields */
