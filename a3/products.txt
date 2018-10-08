@@ -6,3 +6,15 @@ Txl	XL	Tee	"Only comes in XS/XL <br/> Handwash only <br/> Definitely no refunds 
 Mb	big	Big Cup	Due to high demand <br/> only one mug <br/> per customer, sorry.<br/>	Big	28.00
 Mh	huge	Big Cup	Due to high demand <br/> only one mug <br/> per customer, sorry.<br/>	Huge	28.00
 
+
+
+
+
+All calculated prices are present, numeric, displayed to 2 decimal places with '$' in front.	1 mark
+
+Only orders with valid ids, oids, positive quantities and options are added to cart.	1 mark
+
+
+Credit card cannot expire within 1 whole month (or 28 days) of purchase date.	1 mark
+
+Receipt page is styled differently to print on A4 letterhead, contains all details.	1 mark

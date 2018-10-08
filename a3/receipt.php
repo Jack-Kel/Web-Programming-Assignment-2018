@@ -21,6 +21,7 @@ $email = $_SESSION['info']['email'];
 
 	echo "<!DOCTYPE html>";
 	echo "<div class='welcome-message'> Thanks for the money";
+	echo "<div class='welcome-image'></div>";
 	echo "<div class='container'>";
 	echo "<table class='table'>
 		<tr>

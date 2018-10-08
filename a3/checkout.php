@@ -125,7 +125,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 							<input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444" oninput="cardCheck()" value='<?php echo $card ?>'>
 
 							<label for="expmonth">Exp <span class="error">* <?php echo $dateError; ?></span></label>
-							<input type="month" id="expiry" name="expiry" placeholder="01/10"value='<?php echo $date ?>'>
+							<input type="Month" id="expiry" name="expiry" placeholder="01/10"value='<?php echo $date ?>'>
 						</div>
 						<div class="col-50">
 							<label for="ccv">CVV <span class="error">* <?php echo $ccvError; ?></span></label>
