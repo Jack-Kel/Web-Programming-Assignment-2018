@@ -33,13 +33,13 @@ $email = $_SESSION['info']['email'];
 	";
 
 	foreach ($_SESSION["cart"] as $cart){
-		$id = (array_keys($_SESSION["cart"]))[$counter];
+		$id = array_keys($_SESSION["cart"])[$counter];
 		$idDisp = $products[$id]["name"];
 		$break = 1;
 		foreach ($cart as $items){
-			$oid = (array_keys($_SESSION["cart"][$id]))[$break];
+			$oid = array_keys($_SESSION["cart"][$id])[$break];
 			$oidDisp = $products[$id][$oid];
-			$qtyname = (array_keys($_SESSION["cart"][$id][$oid]))[0];
+			$qtyname = array_keys($_SESSION["cart"][$id][$oid])[0];
 			$qty = $_SESSION["cart"][$id][$oid][$qtyname];
 
 			foreach ($products as $product){
@@ -61,7 +61,7 @@ $email = $_SESSION['info']['email'];
 
 			++$break;
 
-			if (!isset((array_keys($_SESSION["cart"][$id]))[$break])){
+			if (!isset(array_keys($_SESSION["cart"][$id])[$break])){
 				break;
 			}
 
