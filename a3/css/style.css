@@ -138,7 +138,7 @@ th {
 .footer{
 	position: absolute;
 	bottom: 10;
-	width: 100%;
+	width: auto;
 	padding-left: 45%;
 	padding-right: 45%;
 }
