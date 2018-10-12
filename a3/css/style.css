@@ -135,3 +135,14 @@ th {
 .got-em{
 	padding-top: 10vh;
 }
+.footer{
+	position: absolute;
+	bottom: 10;
+	width: 100%;
+	padding-left: 45%;
+	padding-right: 45%;
+}
+
+.address{
+	font-size: 18px;
+}

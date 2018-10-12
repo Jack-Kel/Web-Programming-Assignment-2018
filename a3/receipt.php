@@ -15,12 +15,12 @@ $email = $_SESSION['info']['email'];
 
 ?>
 
-<link id='stylecss' type="text/css" rel="stylesheet" href="css/style.css" />
+	<link id='stylecss' type="text/css" rel="stylesheet" href="css/style.css" />
 
-<?php
+	<?php
 
 	echo "<!DOCTYPE html>";
-	echo "<div class='welcome-message'> Thanks for the money";
+	echo "<div class='welcome-message'> Thanks for the money, $name";
 	echo "<div class='welcome-image'></div>";
 	echo "<div class='container'>";
 	echo "<table class='table'>
@@ -73,7 +73,14 @@ $email = $_SESSION['info']['email'];
 	echo "</div>";
 
 	echo "<div class='got-em'>Your Cost: \$$totalCost</div>";
+echo "<div class='address'>
+We have sent your order to you at: <br>
+$address";
+echo "</div>";
 	echo "</div>";
+
+
+    echo "<div class='footer'><a href='orders.txt'>Click here to see orders.txt</a><div>";
 
 
 fclose($file);
