@@ -187,6 +187,7 @@ $post $session
 
 BOTTOMSTUFF;
 		echo $output;
+	 printMyCode();
 
 	}
 //here's my cool as debugger
